@@ -3,54 +3,74 @@
   padding:0;
   box-sizing:border-box;
 }
-body{
-  background-color:rgb(168, 152, 131);
+.wrapper{
+  width: 100%;
+  height: 100vh;
+  background-image:url(/assets/memory.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content{
+  padding-left: 50px;
+}
+
+img{
+  width: 100%;
+  height: 100%;
 }
 .slider-wrapper{
   width: 50%;
-  height: 50vh;
+  height: 60vh;
   overflow: hidden;
+  border: 2px solid;
+  margin-bottom: 10px;
 }
 
 .slider{
   display: flex;
   width: 400%;
+  height: 100%;
   transition: all 1.5s ease;
 }
 .item{
   width: 25%;
-  height: 50vh;
   background-color: brown;
   font-size: 5rem;
   text-align: center;
 }
 input{
-  visibility: hidden;
+  display: none;
 }
 .btn-container{
   display:flex;
 }
-.slider-btn:hover{
-  background-color: aqua;
+.btn-wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 .slider-btn{
-  width: 25px;
-  height: 25px;
+  width: 10px;
+  height: 10px;
   border-radius: 50px;
-  border: 5px solid black;
-  background-color: orange;
+  border: 2px solid rgb(66, 44, 36);
+  background-color: rgb(198, 174, 174);
 }
-.control-button:active{
-  background-color: green;
+.slider-btn:hover{
+  background-color: grey;
+  cursor: pointer;
 }
+
 .description-btn-wrapper{
   display: flex;
-  flex-direction: column;
   width: 50%;
   justify-content: space-between;
 }
 .description-wrapper{
-  width: 50%;
+  width: 100%;
   overflow: hidden;
 }
 .description {
@@ -62,49 +82,56 @@ input{
   transition: opacity 4s ease;;
   opacity: 0;
   width: 100%;
+  color:rgb(198, 174, 174);
+  font-size: 0.6rem;
+  
 }
 
 
-#radio1:checked ~.description-btn-wrapper .btn-container #rad1{
-  background-color: yellow;
+#radio1:checked ~.content .description-btn-wrapper .btn-container #rad1{
+  background-color: black;
+  cursor: default;
 }
-#radio2:checked ~ .description-btn-wrapper .btn-container #rad2{
-  background-color: yellow;
+#radio2:checked ~ .content .description-btn-wrapper .btn-container #rad2{
+  background-color: black;
+  cursor: default;
 }
-#radio3:checked ~ .description-btn-wrapper .btn-container #rad3{
-  background-color: yellow;
+#radio3:checked ~ .content .description-btn-wrapper .btn-container #rad3{
+  background-color: black;
+  cursor: default;
 }
-#radio4:checked ~ .description-btn-wrapper .btn-container #rad4{
-  background-color: yellow;
+#radio4:checked ~ .content .description-btn-wrapper .btn-container #rad4{
+  background-color: black;
+  cursor: default;
 }
 
-#radio1:checked ~ .slider-wrapper .slider,
-#radio1:checked ~ .description-btn-wrapper * .description {
+#radio1:checked ~ .content .slider-wrapper .slider,
+#radio1:checked ~ .content .description-btn-wrapper * .description {
   margin-left: 0%;
 }
-#radio2:checked ~ .slider-wrapper .slider,
-#radio2:checked ~ .description-btn-wrapper * .description{
+#radio2:checked ~ .content .slider-wrapper .slider,
+#radio2:checked ~ .content .description-btn-wrapper * .description{
   margin-left: -100%;
 }
-#radio3:checked ~ .slider-wrapper .slider,
-#radio3:checked ~ .description-btn-wrapper * .description {
+#radio3:checked ~ .content .slider-wrapper .slider,
+#radio3:checked ~ .content .description-btn-wrapper * .description {
   margin-left: -200%;
 }
-#radio4:checked ~ .slider-wrapper .slider,
-#radio4:checked ~ .description-btn-wrapper * .description {
+#radio4:checked ~ .content .slider-wrapper .slider,
+#radio4:checked ~ .content .description-btn-wrapper * .description {
   margin-left: -300%;
 }
 
-#radio1:checked ~ .description-btn-wrapper * * #des1 {
+#radio1:checked ~ .content .description-btn-wrapper  * * #des1 {
   opacity: 1;
 }
-#radio2:checked ~ .description-btn-wrapper * * #des2 {
+#radio2:checked ~ .content .description-btn-wrapper  * * #des2 {
   opacity: 1;
 }
-#radio3:checked ~ .description-btn-wrapper * * #des3 {
+#radio3:checked ~ .content .description-btn-wrapper  * * #des3 {
   opacity: 1;
 }
-#radio4:checked ~ .description-btn-wrapper * * #des4 {
+#radio4:checked ~ .content .description-btn-wrapper  * * #des4 {
   opacity: 1;
 }
 

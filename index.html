@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,37 +10,47 @@
 </head>
 
 <body>
-  <input type="radio" name="radio" id="radio1" checked="">
-  <input type="radio" name="radio" id="radio2">
-  <input type="radio" name="radio" id="radio3">
-  <input type="radio" name="radio" id="radio4">
-
-  <div class="slider-wrapper">
-    <div class="slider">
-      <div id="1" class="item">1</div>
-      <div id="2" class="item" style="background-color: orange">2</div>
-      <div id="3" class="item" style="background-color: rgb(30, 255, 0)">3</div>
-      <div id="4" class="item">4</div>
-    </div>
-  </div>
-  <div class="description-btn-wrapper">
-    <div class="description-wrapper">
-      <div class="description">
-        <p class="description_item" id="des1">random text1</p>
-        <p class="description_item" id="des2">random text2</p>
-        <p class="description_item" id="des3">random text3</p>
-        <p class="description_item" id="des4">random text4</p>
+  <div class="wrapper">
+    <input type="radio" name="radio" id="radio1" checked="">
+    <input type="radio" name="radio" id="radio2">
+    <input type="radio" name="radio" id="radio3">
+    <input type="radio" name="radio" id="radio4">
+    <div class="content">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <div id="s1" class="item"><img class="img" src="/assets/dog.png"></div>
+          <div id="s2" class="item"><img class="img" src="/assets/Teletubbies.jpeg"></div>
+          <div id="s3" class="item"><img class="img" src="/assets/Metallica.jpeg"></div>
+          <div id="s4" class="item"><img class="img" src="/assets/deg.jpeg"></div>
+        </div>
+      </div>
+      <div class="description-btn-wrapper">
+        <div class="description-wrapper">
+          <div class="description">
+            <p class="description_item" id="des1">I don't know, but i'll sniff every butt in this town until i find the
+              answer</p>
+            <p class="description_item" id="des2">Thank god teletubbies was made after colored tv</p>
+            <p class="description_item" id="des3">1991...</p>
+            <p class="description_item" id="des4">it's me</p>
+          </div>
+        </div>
+        <div class="btn-container">
+          <div class="btn-wrapper">
+            <label for="radio1" class="slider-btn" id="rad1"></label>
+          </div>
+          <div class="btn-wrapper">
+            <label for="radio2" class="slider-btn" id="rad2"></label>
+          </div>
+          <div class="btn-wrapper">
+            <label for="radio3" class="slider-btn" id="rad3"></label>
+          </div>
+          <div class="btn-wrapper">
+            <label for="radio4" class="slider-btn" id="rad4"></label>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="btn-container">
-      <label for="radio1" class="slider-btn" id="rad1">1</label>
-      <label for="radio2" class="slider-btn" id="rad2">2</label>
-      <label for="radio3" class="slider-btn" id="rad3">3</label>
-      <label for="radio4" class="slider-btn" id="rad4">4</label>
-    </div>
   </div>
-
-
 </body>
 
 
