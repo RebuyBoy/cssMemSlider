@@ -8,11 +8,9 @@
   width: 100%;
   height: 100vh;
   background-image:url(assets/memory.jpeg);
-  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .content{
   max-width: 35rem;
@@ -27,10 +25,11 @@ img{
 .slider-wrapper{
   height: 60vh;
   overflow: hidden;
-  border: 2px solid;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow:5px 5px 5px black;
+  background-color: black;
+  border: 0.1rem solid;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0.6rem 0.6rem 0.6rem black;
 
 }
 
@@ -40,7 +39,7 @@ img{
   height: 100%;
   transition: all 1.5s ease;
 }
-/* Каждый контрол имеет большую область нажатия, чем размер самого контрола +5 */
+
 .item{
   width: 25%;
   font-size: 3rem;
@@ -54,22 +53,27 @@ input{
   gap:0.2rem;
   justify-content:center;
 }
-.btn-wrapper{
-  height: 100%;
+.slider-btn_wrapper{
+  width: 1.5rem;
+  height: 3rem;
   display: flex;
+  cursor: pointer;
 }
+
 .slider-btn{
-  width: 15px;
-  height: 15px;
-  border-radius: 50px;
-  border: 2px solid rgb(66, 44, 36);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 5rem;
+  border: 0.2rem solid rgb(66, 44, 36);
   background-color: rgb(198, 174, 174);
   transition: all 1s ease;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 0.1rem 0.1rem 0.1rem black;
 }
-.slider-btn:hover{
+.slider-btn_wrapper:hover > .slider-btn{
   background-color: grey;
-  cursor: pointer;
+}
+.slider-btn_wrapper:active > .slider-btn{
+  background-color: brown;
 }
 
 .description-btn-wrapper{
@@ -98,9 +102,12 @@ input{
   .content{
     max-width: 25rem;
   }
+  .slider-wrapper{
+    height: 45vh;
+  }
   .description-btn-wrapper{
     flex-direction: column;
-    gap:20px;
+    gap: 2rem;;
   }
   .btn-wrapper{
     justify-content: center;
