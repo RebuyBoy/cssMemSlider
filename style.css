@@ -2,6 +2,7 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
+  font-size: 10;
 }
 .wrapper{
   width: 100%;
@@ -14,20 +15,23 @@
   justify-content: center;
 }
 .content{
-  padding-left: 50px;
+  max-width: 35rem;
   margin: auto;
 }
 
 img{
   width: 100%;
   height: 100%;
+
 }
 .slider-wrapper{
-  max-width: 50%;
   height: 60vh;
   overflow: hidden;
   border: 2px solid;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow:5px 5px 5px black;
+
 }
 
 .slider{
@@ -36,10 +40,10 @@ img{
   height: 100%;
   transition: all 1.5s ease;
 }
+/* Каждый контрол имеет большую область нажатия, чем размер самого контрола +5 */
 .item{
   width: 25%;
-  background-color: brown;
-  font-size: 5rem;
+  font-size: 3rem;
   text-align: center;
 }
 input{
@@ -47,21 +51,21 @@ input{
 }
 .btn-container{
   display:flex;
+  gap:0.2rem;
+  justify-content:center;
 }
 .btn-wrapper{
-  width: 100%;
   height: 100%;
   display: flex;
 }
 .slider-btn{
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50px;
   border: 2px solid rgb(66, 44, 36);
   background-color: rgb(198, 174, 174);
   transition: all 1s ease;
-
-
+  box-shadow: 1px 1px 1px black;
 }
 .slider-btn:hover{
   background-color: grey;
@@ -70,7 +74,7 @@ input{
 
 .description-btn-wrapper{
   display: flex;
-  width: 50%;
+  gap: 3rem;;
   justify-content: space-between;
 }
 .description-wrapper{
@@ -83,29 +87,50 @@ input{
   transition: opacity 4s ease;
 }
 .description_item {
+  padding-left: 1rem;
   transition: opacity 4s ease;;
   opacity: 0;
   width: 100%;
-  color:rgb(198, 174, 174);
-  font-size: 0.6rem;
-  
+  color:rgb(245, 238, 238);
+  font-size: 1.3rem;
+}
+@media (max-width:786px){
+  .content{
+    max-width: 25rem;
+  }
+  .description-btn-wrapper{
+    flex-direction: column;
+    gap:20px;
+  }
+  .btn-wrapper{
+    justify-content: center;
+    order:1;
+  }
+  .description-wrapper{
+    order: 2;
+  }
+}
+@media (max-width:480px){
+  .content{
+    max-width: 18rem;
+  }
 }
 
 
 #radio1:checked ~.content .description-btn-wrapper .btn-container #rad1{
-  background-color: black;
+  background-color: rgb(184, 122, 56);
   cursor: default;
 }
 #radio2:checked ~ .content .description-btn-wrapper .btn-container #rad2{
-  background-color: black;
+  background-color: rgb(184, 122, 56);
   cursor: default;
 }
 #radio3:checked ~ .content .description-btn-wrapper .btn-container #rad3{
-  background-color: black;
+  background-color: rgb(184, 122, 56);
   cursor: default;
 }
 #radio4:checked ~ .content .description-btn-wrapper .btn-container #rad4{
-  background-color: black;
+  background-color: rgb(184, 122, 56);
   cursor: default;
 }
 
