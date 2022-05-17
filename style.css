@@ -76,11 +76,12 @@ input {
 	box-shadow: 0.1rem 0.1rem 0.1rem black;
 }
 
-.slider-btn_wrapper:hover>.slider-btn {
+.slider-btn_wrapper:hover > .slider-btn {
 	background-color: grey;
+	border-color: rgb(184, 170, 170);
 }
 
-.slider-btn_wrapper:active>.slider-btn {
+.slider-btn_wrapper:active > .slider-btn {
 	background-color: brown;
 }
 
@@ -143,58 +144,37 @@ input {
 }
 
 
-#radio1:checked~.content .description-btn-wrapper .btn-container #rad1 {
+#radio1:checked ~ .content .description-btn-wrapper .btn-container #rad1,
+#radio2:checked ~ .content .description-btn-wrapper .btn-container #rad2,
+#radio3:checked ~ .content .description-btn-wrapper .btn-container #rad3, 
+#radio4:checked ~ .content .description-btn-wrapper .btn-container #rad4 {
 	background-color: rgb(184, 122, 56);
 	cursor: default;
 }
 
-#radio2:checked~.content .description-btn-wrapper .btn-container #rad2 {
-	background-color: rgb(184, 122, 56);
-	cursor: default;
-}
-
-#radio3:checked~.content .description-btn-wrapper .btn-container #rad3 {
-	background-color: rgb(184, 122, 56);
-	cursor: default;
-}
-
-#radio4:checked~.content .description-btn-wrapper .btn-container #rad4 {
-	background-color: rgb(184, 122, 56);
-	cursor: default;
-}
-
-#radio1:checked~.content .slider-wrapper .slider,
-#radio1:checked~.content .description-btn-wrapper * .description {
+#radio1:checked ~ .content .slider-wrapper .slider,
+#radio1:checked ~ .content .description-btn-wrapper * .description {
 	margin-left: 0%;
 }
 
-#radio2:checked~.content .slider-wrapper .slider,
-#radio2:checked~.content .description-btn-wrapper * .description {
+#radio2:checked ~ .content .slider-wrapper .slider,
+#radio2:checked ~ .content .description-btn-wrapper * .description {
 	margin-left: -100%;
 }
 
-#radio3:checked~.content .slider-wrapper .slider,
-#radio3:checked~.content .description-btn-wrapper * .description {
+#radio3:checked ~ .content .slider-wrapper .slider,
+#radio3:checked ~ .content .description-btn-wrapper * .description {
 	margin-left: -200%;
 }
 
-#radio4:checked~.content .slider-wrapper .slider,
-#radio4:checked~.content .description-btn-wrapper * .description {
+#radio4:checked ~ .content .slider-wrapper .slider,
+#radio4:checked ~ .content .description-btn-wrapper * .description {
 	margin-left: -300%;
 }
 
-#radio1:checked~.content .description-btn-wrapper * * #des1 {
-	opacity: 1;
-}
-
-#radio2:checked~.content .description-btn-wrapper * * #des2 {
-	opacity: 1;
-}
-
-#radio3:checked~.content .description-btn-wrapper * * #des3 {
-	opacity: 1;
-}
-
-#radio4:checked~.content .description-btn-wrapper * * #des4 {
+#radio1:checked ~ .content .description-btn-wrapper * * #des1,
+#radio2:checked ~ .content .description-btn-wrapper * * #des2,
+#radio3:checked ~ .content .description-btn-wrapper * * #des3,
+#radio4:checked ~ .content .description-btn-wrapper * * #des4{
 	opacity: 1;
 }
